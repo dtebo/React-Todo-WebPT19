@@ -1,8 +1,17 @@
 import React from 'react';
 
-const TodoList = () => {
+import Todo from './Todo';
+
+const TodoList = (props) => {
+    const { todos } = props;
+
     return (
         <>
+            {todos.map(todo => {
+               return <Todo
+                        todo={todo}
+                      />
+            })}
         </>
     );
 };
