@@ -1,12 +1,22 @@
 import React from 'react';
 
+import './Todo.css';
+
 const Todo = (props) => {
     const { todo } = props;
 
+    const handleClick = e => {
+        e.preventDefault();
+
+        props.toggleItem(todo.id);
+    }
+
     return (
-        <>
-            <p>{todo.task}</p>
-        </>
+        <div
+            onClick={handleClick}
+        >
+            <p className={`todo${todo.completed ? ' completed' : ''}`}>{todo.task}</p>
+        </div>
     );
 };
 
