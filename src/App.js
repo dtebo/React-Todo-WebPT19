@@ -15,6 +15,18 @@ class App extends React.Component {
     todos: todos
   };
 
+  componentDidMount(){
+    //Grab todos from localStorage if possible
+    if(localStorage.getItem('todos')){
+      this.setState({
+        todos: JSON.parse(localStorage.getItem('todos'))
+      });
+    }
+    else{
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+    }
+  }
+
   toggleItem = id => {
     this.setState({
       todos: this.state.todos.map(item => {
