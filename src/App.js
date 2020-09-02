@@ -13,6 +13,14 @@ class App extends React.Component {
     todos: todos
   };
 
+  addTodo = todo => {
+    this.setState({
+      todos: [...this.state.todos, {id: Date.now(), task: todo, completed: false}]
+    });
+
+    console.log('from App addTodo: ', todo);
+  }
+
   render() {
     return (
       <div>
@@ -20,7 +28,9 @@ class App extends React.Component {
         <TodoList
           todos={this.state.todos}
         />
-        <TodoForm />
+        <TodoForm
+          addTodo={this.addTodo}
+        />
       </div>
     );
   }
