@@ -14,3 +14,13 @@ p.todo.completed{
     background-color: rgba(0, 170, 147, 0.3);
     text-decoration: line-through;
 }
+
+/* Form Styles */
+.todo-form{
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.todo-form label, .todo-form button{
+    margin: 10px;
+}

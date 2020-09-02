@@ -20,9 +20,12 @@ class TodoForm extends Component{
     render(){
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
+                <form 
+                    className='todo-form'
+                    onSubmit={this.handleSubmit}
+                >
                     <label htmlFor='todo'>
-                        Todo
+                        Todo&nbsp;
                         <input
                             type='text'
                             id='todo'
