@@ -2,11 +2,13 @@ import React from 'react';
 
 import Todo from './Todo';
 
+import './Todo.css';
+
 const TodoList = (props) => {
     const { todos, clearTodo } = props;
 
     return (
-        <div>
+        <div className='todo-list'>
             {todos.map(todo => {
                return <Todo
                         key={todo.id}
