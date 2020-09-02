@@ -20,7 +20,7 @@ class App extends React.Component {
           return {
             ...item,
             completed: !item.completed
-          }
+          };
         }
 
         return item;
@@ -32,14 +32,12 @@ class App extends React.Component {
     this.setState({
       todos: [...this.state.todos, {id: Date.now(), task: todo, completed: false}]
     });
-
-    console.log('from App addTodo: ', todo);
   }
 
   clearTodo = () => {
     this.setState({
       todos: this.state.todos.filter(todo => {
-        return !todo.completed
+        return !todo.completed;
       })
     });
   }
@@ -51,6 +49,7 @@ class App extends React.Component {
         <TodoList
           todos={this.state.todos}
           toggleItem={this.toggleItem}
+          clearTodo={this.clearTodo}
         />
         <TodoForm
           addTodo={this.addTodo}

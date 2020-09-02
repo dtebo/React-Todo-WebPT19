@@ -3,7 +3,7 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => {
-    const { todos } = props;
+    const { todos, clearTodo } = props;
 
     return (
         <div>
@@ -14,6 +14,11 @@ const TodoList = (props) => {
                         toggleItem={props.toggleItem}
                       />
             })}
+            <button
+                onClick={clearTodo}
+            >
+                Clear Todo
+            </button>
         </div>
     );
 };
