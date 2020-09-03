@@ -1,0 +1,27 @@
+.todo-list{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.todo{
+    background-color: rgb(0, 170, 147);
+    color: rgb(244,244,244);
+    margin: 1rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+p.todo.completed{
+    background-color: rgba(0, 170, 147, 0.3);
+    text-decoration: line-through;
+}
+
+/* Form Styles */
+.todo-form{
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.todo-form label, .todo-form button{
+    margin: 10px;
+}
